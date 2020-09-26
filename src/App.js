@@ -1,10 +1,12 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 // import components
 import TopBar from './components/TopBar';
 import Nav from './components/Nav';
 import KonnectSlider from './components/KonnectSlider';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
       <TopBar />
       <Nav />
       <KonnectSlider />
+      <Footer />
     </div>
   );
 }
