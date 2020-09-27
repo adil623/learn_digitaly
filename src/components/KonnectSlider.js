@@ -1,8 +1,17 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const KonnectSlider = () => {
+  const location = useLocation();
+  let flag = true;
+  if (location.pathname != '/Home' && location.pathname != '/') {
+    flag = false;
+  }
   return (
-    <div class='konnect-carousel carousel-image carousel-image-pagination carousel-image-arrows flexslider'>
+    <div
+      class='konnect-carousel carousel-image carousel-image-pagination carousel-image-arrows flexslider'
+      style={{ display: flag ? 'block' : 'none' }}
+    >
       <ul class='slides'>
         <li class='item'>
           <div class='container'>

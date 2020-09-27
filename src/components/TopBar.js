@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TopBar = () => {
+  const divLiStyle = {
+    marginRight: '3px',
+  };
   return (
     <div className='konnect-info'>
       <div className='container-fluid'>
@@ -24,15 +28,16 @@ const TopBar = () => {
           <div className='col-md-6 col-sm-4'>
             <ul className='konnect-float-right'>
               <li>
-                <a href='login.html'>
-                  <i className='fa fa-user-o' aria-hidden='true'></i> Login{' '}
-                </a>
+                <Link to='/Home/login'>
+                  Login <i className='fa fa-user-o' aria-hidden='true'></i>
+                </Link>
               </li>
               <li>
-                <a href='/#'>
-                  <i className='fa fa-file-text-o' aria-hidden='true'></i>{' '}
-                  Register{' '}
-                </a>
+                <Link to='/Home/register'>
+                  {' '}
+                  Register
+                  <i className='fa fa-file-text-o' aria-hidden='true'></i>
+                </Link>
               </li>
               <li className='li-last hidden-xs hidden-sm'>
                 <a target='_blank' href='#'>
