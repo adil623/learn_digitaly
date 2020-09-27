@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
@@ -7,8 +7,11 @@ import TopBar from './components/TopBar';
 import Nav from './components/Nav';
 import KonnectSlider from './components/KonnectSlider';
 import Footer from './components/Footer';
+import Login from './components/Login';
+import Register from './components/Register';
 
 function App() {
+  const [sliderFlag, setSliderFlag] = useState(true);
   return (
     <Router>
       <div className='App'>
@@ -35,7 +38,13 @@ function App() {
         </div>
         <TopBar />
         <Nav />
+        <Switch>
+          <Route path='/Home' exact />
+          <Route path='/Home/login' component={Login} />
+          <Route path='/Home/register' component={Register} />
+        </Switch>
         <KonnectSlider />
+
         <Footer />
       </div>
     </Router>
