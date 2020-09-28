@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -51,10 +52,10 @@ const Nav = () => {
         >
           <ul className='nav navbar-nav navbar-right'>
             <li className='active'>
-              <a href='index-2.html'>Home</a>
+              <Link to='/'> Home </Link>
             </li>
             <li>
-              <a href='about.html'>About Us</a>
+              <Link to='/Home/About'> About Us </Link>
             </li>
             <li className='dropdown'>
               <a

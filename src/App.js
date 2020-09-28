@@ -9,6 +9,7 @@ import KonnectSlider from './components/KonnectSlider';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Register from './components/Register';
+import About from './components/About';
 
 function App() {
   const [sliderFlag, setSliderFlag] = useState(true);
@@ -42,6 +43,7 @@ function App() {
           <Route path='/Home' exact />
           <Route path='/Home/login' component={Login} />
           <Route path='/Home/register' component={Register} />
+          <Route path='/Home/About' component={About} />
         </Switch>
         <KonnectSlider />
 

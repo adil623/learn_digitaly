@@ -265,9 +265,9 @@ section.main-footer {
 }
 h2.para-heading {
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 25px;
   margin: 0 0 25px;
-  font-weight: bold;
+  font-weight: 500;
   letter-spacing: 0.5pt;
 }
 .section-heading.text-white {
