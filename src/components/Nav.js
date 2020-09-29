@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Nav = () => {
+  const location = useLocation();
+
+  const homeClass = location.pathname === '/' ? 'active' : '';
+  const aboutClass = location.pathname.match(/^\/Home\/About/) ? 'active' : '';
+  const articleClass = location.pathname.match(/^\/Home\/Articles/)
+    ? 'active'
+    : '';
+  const blogClass = location.pathname.match(/^\/Home\/Blog/) ? 'active' : '';
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -51,66 +59,19 @@ const Nav = () => {
           id='bs-example-navbar-collapse-1'
         >
           <ul className='nav navbar-nav navbar-right'>
-            <li className='active'>
-              <Link to='/'> Home </Link>
+            <li className={homeClass}>
+              <NavLink to='/'> Home </NavLink>
             </li>
-            <li>
-              <Link to='/Home/About'> About Us </Link>
-            </li>
-
-            <li>
-              <Link to='/Home/Articles'> Articles </Link>
+            <li className={aboutClass}>
+              <NavLink to='/Home/About'> About Us </NavLink>
             </li>
 
-            <li className='dropdown'>
-              <a
-                href='pages.html'
-                className='dropdown-toggle'
-                data-toggle='dropdown'
-              >
-                Pages <i className='fa fa-angle-down' aria-hidden='true'></i>
-              </a>
-              <ul className='dropdown-menu'>
-                <li>
-                  <a href='about.html'>About Us</a>
-                </li>
-                <li>
-                  <a href='course.html'>Courses</a>
-                </li>
-                <li>
-                  <a href='single-course.html'>Single Course</a>
-                </li>
-                <li>
-                  <a href='apply-course.html'>Application</a>
-                </li>
-                <li>
-                  <a href='gallery.html'>Gallery</a>
-                </li>
-                <li>
-                  <a href='404.html'>404 page</a>
-                </li>
-                <li>
-                  <a href='login.html'>Login</a>
-                </li>
-                <li>
-                  <a href='register.html'>Register</a>
-                </li>
-                <li>
-                  <a href='faq.html'>Faq</a>
-                </li>
-                <li>
-                  <a href='contact-one.html'>Contact One</a>
-                </li>
-                <li>
-                  <a href='contact-two.html'>Contact Two</a>
-                </li>
-                <li>
-                  <a href='terms-and-conditions.html'>Terms and Conditions</a>
-                </li>
-                <li>
-                  <a href='privacy-policy.html'>Privacy Policy</a>
-                </li>
-              </ul>
+            <li className={articleClass}>
+              <NavLink to='/Home/Articles'> Articles </NavLink>
+            </li>
+
+            <li className={blogClass}>
+              <NavLink to='/Home/Blog'> Blogs </NavLink>
             </li>
             <li className='dropdown'>
               <a

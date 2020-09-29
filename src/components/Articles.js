@@ -1,9 +1,33 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Articles = () => {
   const Background = '../img/news/news1.jpg';
   return (
     <div>
+      <header className='inner'>
+        {/*<!-- Banner --> */}
+        <div className='header-content'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-sm-12'>
+                <h1 id='homeHeading'>
+                  <Link
+                    to='/Home/About'
+                    style={{
+                      color: '#5dc560',
+                      fontWeight: 'bold',
+                      fontSize: '30px',
+                    }}
+                  >
+                    Articles
+                  </Link>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
       {/*<!-- blogs  --> */}
       <section class='section-bottom-border'>
         <div class='container'>
