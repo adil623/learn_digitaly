@@ -57,26 +57,11 @@ const Nav = () => {
             <li>
               <Link to='/Home/About'> About Us </Link>
             </li>
-            <li className='dropdown'>
-              <a
-                href='course.html'
-                className='dropdown-toggle'
-                data-toggle='dropdown'
-              >
-                Courses <i className='fa fa-angle-down' aria-hidden='true'></i>
-              </a>
-              <ul className='dropdown-menu'>
-                <li>
-                  <a href='course.html'>Courses</a>
-                </li>
-                <li>
-                  <a href='single-course.html'>Single Course</a>
-                </li>
-                <li>
-                  <a href='apply-course.html'>Application</a>
-                </li>
-              </ul>
+
+            <li>
+              <Link to='/Home/Articles'> Articles </Link>
             </li>
+
             <li className='dropdown'>
               <a
                 href='pages.html'
